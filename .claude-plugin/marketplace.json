@@ -1,0 +1,16 @@
+{
+  "name": "webmcp-skill",
+  "owner": {
+    "name": "Masset",
+    "url": "https://www.getmasset.com"
+  },
+  "plugins": [
+    {
+      "name": "webmcp",
+      "source": "https://github.com/getmasset/webmcp-skill.git",
+      "subdirectory": "webmcp",
+      "description": "Implement WebMCP (the Web Model Context Protocol) on a website so AI agents can use its forms and actions as structured, reliable tools.",
+      "version": "0.1.0"
+    }
+  ]
+}

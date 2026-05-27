@@ -1,0 +1,10 @@
+{
+  "name": "webmcp",
+  "description": "Implement WebMCP (the Web Model Context Protocol) on a website so AI agents can use its forms and actions as structured, reliable tools instead of guessing from the screen.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Masset",
+    "url": "https://www.getmasset.com"
+  },
+  "homepage": "https://www.getmasset.com/resources/webmcp"
+}

@@ -1,0 +1,50 @@
+<!--
+  WebMCP declarative example.
+  A normal HTML form, annotated so an AI agent can use it as a tool.
+  The form works exactly the same for human visitors.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact us</title>
+</head>
+<body>
+
+  <h1>Contact us</h1>
+
+  <form toolname="contact_request"
+        tooldescription="Send a message to the team. Use this to ask a question or request a callback."
+        action="/contact"
+        method="post">
+
+    <label for="name">Your name</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email" required
+           toolparamdescription="The email address the team should reply to.">
+
+    <label for="topic">What is this about?</label>
+    <select name="topic" id="topic" required
+            toolparamtitle="Topic"
+            toolparamdescription="Routes the message to the right team.">
+      <option value="Sales">I want to talk to sales.</option>
+      <option value="Support">I need help with the product.</option>
+      <option value="Partnership">I want to discuss a partnership.</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea name="message" id="message" required
+              toolparamdescription="The full message from the user. Pass it through as written."></textarea>
+
+    <!--
+      No toolautosubmit attribute, so the agent fills the form and
+      the user reviews and submits it. Add toolautosubmit to the
+      <form> only if it is safe to submit without human review.
+    -->
+    <button type="submit">Send message</button>
+  </form>
+
+</body>
+</html>
